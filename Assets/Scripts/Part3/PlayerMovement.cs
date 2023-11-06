@@ -36,6 +36,9 @@ public class PlayerMovement : MonoBehaviour
         anim.SetInteger("facingParam", facing);
         anim.SetFloat("xSpdParam", currentSpeed.x);
         anim.SetFloat("ySpdParam", currentSpeed.y);
+
+        //check if player is stationary
+        anim.SetBool("movingParam", currentSpeed.magnitude > 0);
     }
     
 
